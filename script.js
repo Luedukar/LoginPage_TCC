@@ -16,26 +16,30 @@ RegisterBtn.addEventListener("click", () => {
     "before:top-[70%]"
   );
 
-  teste2.classList.remove("left-[0]", "absolute");
   teste2.classList.add(
-    "left-[-50%]",
+    "sm:left-[-50%]",
     "duration-[1000ms]",
-    "hidden",
-    "left-[0]",
     "top-[-30%]"
   );
+  teste2.classList.remove("sm:left-[0]", "top-[0]")
 
-  teste3.classList.remove("bottom-[30%]");
   teste3.classList.add(
     "sm:right-[0]",
     "sm:duration-[1200ms]",
     "bottom-[0]",
     "absolute"
   );
+  teste3.classList.remove("bottom-[-30%]");
 
-  teste4.classList.add("right-[50%]", "duration-[1200ms]", "hidden");
-  teste5.classList.add("right-[50%]", "duration-[1200ms]");
-  teste5.classList.remove("hidden");
+  teste4.classList.remove('delay-300')
+  teste4.classList.add("right-[100%]");
+
+  
+  teste5.classList.add("sm:right-[50%]", "w-full", "bottom-[16%]", "right-[0]");
+  teste5.classList.remove("right-[-100%]");
+  
+  
+  
 });
 
 LoginBtn.addEventListener("click", () => {
@@ -47,13 +51,20 @@ LoginBtn.addEventListener("click", () => {
     "before:top-[70%]"
   );
 
-  teste2.classList.remove("left-[-50%]", "hidden", "left-[0]", "top-[-30%]");
-  teste2.classList.add("left-[0]", "absolute");
+  teste2.classList.remove(
+    "sm:left-[-50%]",
+    "duration-[1000ms]",
+    "top-[-30%]"
+  );
+  teste2.classList.add("sm:left-[0]", "top-[0]")
 
-  teste3.classList.remove("sm:right-[0]", "sm:duration-[1200ms]", "absolute");
-  teste3.classList.add("bottom-[30%]");
 
-  teste4.classList.remove("right-[50%]", "duration-[1200ms]", "hidden");
-  teste5.classList.add("hidden");
-  teste5.classList.remove("right-[50%]", "duration-[1200ms]");
+  teste3.classList.remove("sm:right-[0]", "absolute", 'bottom-[0]');
+  teste3.classList.add("bottom-[-30%]");
+
+  teste4.classList.remove("right-[100%]");
+  teste4.classList.add('delay-300')
+
+  teste5.classList.remove("sm:right-[50%]", "sm:w-full", "right-[0]");
+  teste5.classList.add("right-[-100%]");
 });
