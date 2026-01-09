@@ -9,10 +9,30 @@ const LoginBtn = document.querySelector(".login-btn");
 
 RegisterBtn.addEventListener("click", () => {
   container.classList.add("active");
-  teste.classList.add("before:left-[50%]");
-  teste2.classList.remove("left-[0]");
-  teste2.classList.add("left-[-50%]", "duration-[1000ms]", "hidden");
-  teste3.classList.add("right-[0]", "duration-[1200ms]");
+
+  teste.classList.add(
+    "sm:before:left-[50%]",
+    "before:left-[0]",
+    "before:top-[70%]"
+  );
+
+  teste2.classList.remove("left-[0]", "absolute");
+  teste2.classList.add(
+    "left-[-50%]",
+    "duration-[1000ms]",
+    "hidden",
+    "left-[0]",
+    "top-[-30%]"
+  );
+
+  teste3.classList.remove("bottom-[30%]");
+  teste3.classList.add(
+    "sm:right-[0]",
+    "sm:duration-[1200ms]",
+    "bottom-[0]",
+    "absolute"
+  );
+
   teste4.classList.add("right-[50%]", "duration-[1200ms]", "hidden");
   teste5.classList.add("right-[50%]", "duration-[1200ms]");
   teste5.classList.remove("hidden");
@@ -20,10 +40,19 @@ RegisterBtn.addEventListener("click", () => {
 
 LoginBtn.addEventListener("click", () => {
   container.classList.remove("active");
-  teste.classList.remove("before:left-[50%]");
-  teste2.classList.remove("left-[-50%]", "hidden");
-  teste2.classList.add("left-[0]");
-  teste3.classList.remove("right-[0]", "duration-[1200ms]");
+
+  teste.classList.remove(
+    "sm:before:left-[50%]",
+    "before:left-[0]",
+    "before:top-[70%]"
+  );
+
+  teste2.classList.remove("left-[-50%]", "hidden", "left-[0]", "top-[-30%]");
+  teste2.classList.add("left-[0]", "absolute");
+
+  teste3.classList.remove("sm:right-[0]", "sm:duration-[1200ms]", "absolute");
+  teste3.classList.add("bottom-[30%]");
+
   teste4.classList.remove("right-[50%]", "duration-[1200ms]", "hidden");
   teste5.classList.add("hidden");
   teste5.classList.remove("right-[50%]", "duration-[1200ms]");
